@@ -15,7 +15,7 @@ setInterval(function () {
     if(reload) {
         updateAll();
     }
-}, 30000);
+}, 10000);
 
 function toggleReload() {
     reload = !reload;

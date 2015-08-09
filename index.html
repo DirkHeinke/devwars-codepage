@@ -8,19 +8,50 @@
 </head>
 <body>
 <nav>
+	<img src="http://red.devwars.tv/logo.png">
     <label id="reload">
         <input type="checkbox" onclick="toggleReload()">
-        Autoreload - 30 sec
+        Autoreload - 10 sec
     </label>
 </nav>
 
+<div class="viewcode-container">
+	<div class="blue-team html">
+		<span class="team__html title">HTML</span>
+		<span id="blue-team__html" class="player">Steven</span>
+		<pre><code class="html" id="htmlBlue"></code></pre>
+	</div>
 
-<pre><code class="html" id="htmlBlue"></code></pre>
-<pre><code class="css" id="cssBlue"></code></pre>
-<pre><code class="javascript" id="jsBlue"></code></pre>
-<pre><code class="html" id="htmlRed"></code></pre>
-<pre><code class="css" id="cssRed"></code></pre>
-<pre><code class="javascript" id="jsRed"></code></pre>
+	<div class="blue-team css">
+		<span class="team__css title">CSS</span>
+		<span id="blue-team__css" class="player">Beau</span>
+		<pre><code class="css" id="cssBlue"></code></pre>
+	</div>
+
+	<div class="blue-team js">
+		<span class="team__js title">JavaScript</span>
+		<span id="blue-team__js" class="player">Terence</span>
+		<pre><code class="javascript" id="jsBlue"></code></pre>
+	</div>
+
+	<div class="red-team html">
+		<span class="team__html title">HTML</span>
+		<span id="red-team__html" class="player">Steven</span>
+		<pre><code class="html" id="htmlRed"></code></pre>
+	</div>
+
+	<div class="red-team css">
+		<span class="team__css title">CSS</span>
+		<span id="red-team__css" class="player">Beau</span>
+		<pre><code class="css" id="cssRed"></code></pre>
+	</div>
+
+	<div class="red-team js">
+		<span class="team__js title">JavaScript</span>
+		<span id="red-team__js" class="player">Terence</span>
+		<pre><code class="javascript" id="jsRed"></code></pre>
+	</div>
+</div>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
 <script src="main.js"></script>
