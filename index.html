@@ -5,21 +5,32 @@
     <title>DevWars Live Code</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/darkula.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <nav>
 	<img src="http://red.devwars.tv/logo.png">
-    <label id="reload">
-        <input type="checkbox" onclick="toggleReload()">
-        Autoreload - 10 sec
+
+	<div class="second button-container">
+		<span class="red-team-view button red-button">Red Team</span>
+	    <span class="blue-team-view button blue-button">Blue Team</span>
+	    <span class="default-view button default-button">Default View</span>
+	</div>	
+
+    <div class="button-container">
+	    <span class="blue-html button blue-button">Blue HTML</span>
+	    <span class="blue-css button blue-button">Blue CSS</span>
+	    <span class="blue-js button blue-button">Blue JS</span>
+	    <span class="red-html button red-button">Red HTML</span>
+	    <span class="red-css button red-button">Red CSS</span>
+	    <span class="red-js button red-button">Red JS</span>
+	</div>	
+
+    <label id="reload" class="reload">
+    	<span>Auto Reload</span>
+        <input type="checkbox" class="regular-radio" onclick="toggleReload()">
     </label>
-    <span class="blue-html button">Blue HTML</span>
-    <span class="blue-css button">Blue CSS</span>
-    <span class="blue-js button">Blue JS</span>
-    <span class="red-html button">Red HTML</span>
-    <span class="red-css button">Red CSS</span>
-    <span class="red-js button">Red JS</span>
-    <span class="button">RESET</span>
+
 </nav>
 
 <div class="viewcode-container">

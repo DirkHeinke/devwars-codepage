@@ -22,18 +22,63 @@ nav {
 }
 
 nav img {
+    float: left;
     margin: 10px;
 }
 
-nav .button {
+nav .button-container {
     vertical-align: top;
     display: inline-block;
+    width: 500px;
+    height: 60px;
+    margin: 10px;
+    float: right;
+}
+
+nav .second {
+    width: 500px;
+    margin: 10px 0 0;
+}
+
+nav .button {
+    display: inline-block;
     cursor: pointer;
-    padding: 4px 10px;
-    margin: 0 5px;
+    text-align: center;
+    width: calc(33.33% - 10px);
+    line-height: 26px;
+    margin: 2px 2px;
     font-size: 12px;
     color: #fff;
-    background: tan;
+}
+
+nav .second .button {
+    line-height: 56px;
+    margin: 2px 2px;
+    vertical-align: top;
+}
+
+nav .blue-button {
+    background: #03A9F4;
+}
+
+nav .blue-button:hover {
+    background: #14b4fc;
+}
+
+nav .red-button {
+    background: #E91E63;
+}
+
+nav .red-button:hover {
+    background: #eb3573;
+}
+
+nav .default-button {
+    background: #0E9841;
+}
+
+nav .default-button:hover {
+    background: #10af4b;
 }
 
 .viewcode-container {
@@ -168,21 +213,145 @@ code {
     border: 5px solid #E91E63;
 }
 
-.single-team-active-blue {
-    display: block;
-    width: 100%;
+.team-active {
+    display: inline-block;
     height: 100%;
     margin: 0;
-    border: 5px solid #03A9F4;
 }
 
-.single-team-active-red {
-    display: block;
-    width: 33.33%;
-    height: 100%;
-    margin: 0;
-    border: 5px solid #E91E63;
+.reload {
+    position: relative;
+    float: right;
+    margin: 38px 60px 0 0;
+    height: 40px;
+    font-size: 14px;
 }
 
+.reload span {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
 
+.regular-radio:focus { outline: none; }
 
+.regular-radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  height: 30px;
+  cursor: pointer;
+  width: 100px;
+  background-color: #e56c69;
+  transition: all 0.3s ease; 
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease; 
+  -o-transition: all 0.3s ease;  
+}
+ 
+.regular-radio:checked:after {
+  content: '';
+  width: 45px;
+  height: 24px;
+  top: 3px;
+  left: 3px;
+  position: absolute;
+  background: #fff;
+}
+
+.regular-radio:checked {
+  background-color: #6ADD75;
+}
+
+.regular-radio:after {
+  content: ' ';
+  width: 45px;
+  height: 24px;
+  top: 3px;
+  left: 52px;
+  position: absolute;
+  background: #fff;
+  transition: all 0.3s ease; 
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease; 
+  -o-transition: all 0.3s ease;  
+}
+
+@media (max-width: 1440px) {
+
+    nav {
+        height: 160px;
+    }    
+
+    nav img {
+        margin: 50px 20px;
+    }
+
+    nav .button-container {
+        clear: right;
+        margin: 10px 0 0;
+
+    }
+
+    .reload {
+        position: absolute;
+        left: 30%;
+        margin: 68px 60px 0 0;
+    }
+
+    .viewcode-container {
+        height: calc(100vh - 160px);
+    }
+
+}
+
+@media (max-width: 870px) {
+
+    nav {
+        height: 170px;
+    }
+
+    nav img {
+        margin: 10px 20px;
+    }
+
+    nav .second {
+        display: none;
+    }
+
+    nav .button-container {
+        width: 100%;
+        margin: 0;
+    }
+
+    nav .button {
+        width: calc(33.33% - 4px);
+        line-height: 40px;
+    }
+
+    .viewcode-container {
+        height: calc(100vh - 170px);
+    }
+
+    .reload {
+        position: absolute;
+        left: auto;
+        right: 15px;
+        top: 35px;
+        margin: 0;
+    }
+
+}
+
+@media (max-width: 379px) { 
+
+    .reload {
+        display: none;
+    }
+}
