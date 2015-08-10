@@ -13,40 +13,47 @@
         <input type="checkbox" onclick="toggleReload()">
         Autoreload - 10 sec
     </label>
+    <span class="blue-html button">Blue HTML</span>
+    <span class="blue-css button">Blue CSS</span>
+    <span class="blue-js button">Blue JS</span>
+    <span class="red-html button">Red HTML</span>
+    <span class="red-css button">Red CSS</span>
+    <span class="red-js button">Red JS</span>
+    <span class="button">RESET</span>
 </nav>
 
 <div class="viewcode-container">
-	<div class="blue-team html">
+	<div class="blue-team html blue-view__html">
 		<span class="team__html title">HTML</span>
 		<span id="blue-team__html" class="player">Steven</span>
 		<pre><code class="html" id="htmlBlue"></code></pre>
 	</div>
 
-	<div class="blue-team css">
+	<div class="blue-team css blue-view__css">
 		<span class="team__css title">CSS</span>
 		<span id="blue-team__css" class="player">Beau</span>
 		<pre><code class="css" id="cssBlue"></code></pre>
 	</div>
 
-	<div class="blue-team js">
+	<div class="blue-team js blue-view__js">
 		<span class="team__js title">JavaScript</span>
 		<span id="blue-team__js" class="player">Terence</span>
 		<pre><code class="javascript" id="jsBlue"></code></pre>
 	</div>
 
-	<div class="red-team html">
+	<div class="red-team html red-view__html">
 		<span class="team__html title">HTML</span>
 		<span id="red-team__html" class="player">Steven</span>
 		<pre><code class="html" id="htmlRed"></code></pre>
 	</div>
 
-	<div class="red-team css">
+	<div class="red-team css red-view__css">
 		<span class="team__css title">CSS</span>
 		<span id="red-team__css" class="player">Beau</span>
 		<pre><code class="css" id="cssRed"></code></pre>
 	</div>
 
-	<div class="red-team js">
+	<div class="red-team js red-view__js">
 		<span class="team__js title">JavaScript</span>
 		<span id="red-team__js" class="player">Terence</span>
 		<pre><code class="javascript" id="jsRed"></code></pre>
@@ -55,6 +62,8 @@
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
 <script src="main.js"></script>
+<script src="jquery.min.js"></script>
+<script src="test.js"></script>
 
 </body>
 </html>
