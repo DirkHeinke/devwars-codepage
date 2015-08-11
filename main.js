@@ -124,6 +124,14 @@ var teamViewBlue = function() {
     }    
 };
 
+if ($(window).width() < 870) {
+    for (var i = 0; i < 6; i++) {
+        $(codeview[i]).addClass("mobile-inactive");
+        console.log("test");
+    }
+} else {
+    console.log('More than 870 resize');
+}
 
 $(".button").click(function() {
     if ( $(this).hasClass("blue-html") ) {
@@ -154,5 +162,47 @@ $(".button").click(function() {
         makeInactive();
         defaultView();
 
+    }
+});
+
+
+
+
+
+// Fetch Player Names
+
+var DevWarsAPI = "http://bezcode.com:9090/v1/game/currentgame";
+
+$.getJSON(DevWarsAPI, function (json) {
+      
+    var teamBlue = json.teams.blue.players;
+    var teamRed = json.teams.red.players;
+            
+    var i;
+    for (i = 0; i < teamBlue.length; ++i) {
+        if (teamBlue[i].language == "HTML") {
+            $("#blue-team__html").text('');
+            $("#blue-team__html").append(teamBlue[i].user.username);
+        } else if (teamBlue[i].language == "CSS") {
+            $("#blue-team__css").text('');
+            $("#blue-team__css").append(teamBlue[i].user.username);
+        } else if (teamBlue[i].language == "JS") {
+            $("#blue-team__js").text('');
+            $("#blue-team__js").append(teamBlue[i].user.username);
+        }
+    }
+
+    var j;
+    for (j = 0; j < teamRed.length; ++j) {
+        if (teamRed[j].language == "HTML") {
+            $("#red-team__html").text('');
+            $("#red-team__html").append(teamRed[j].user.username);
+        } else if (teamRed[j].language == "CSS") {
+            $("#red-team__css").text('');
+            $("#red-team__css").append(teamRed[j].user.username);
+        } else if (teamRed[j].language == "JS") {
+            $("#red-team__js").text('');
+            $("#red-team__js").append(teamRed[j].user.username);
+        }
     }
 });

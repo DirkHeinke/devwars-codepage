@@ -134,6 +134,7 @@ nav .default-button:hover {
     top: 35px; right: 0; left: 0;
     font-size: 14px;
     line-height: 25px;
+    min-height: 25px;
     text-align: center;1px solid rgba(255,255,255,0.3);2padding: 0 0 5px;
     color: #fff; 
     background: #191919;
@@ -351,7 +352,19 @@ code {
 
 @media (max-width: 379px) { 
 
+    nav {
+        height: 150px;
+    }
+
+    nav img {
+        height: 40px;
+    }
+
     .reload {
-        display: none;
+        top: 25px;
+    }
+
+    .reload span {
+        top: -20px;
     }
 }
