@@ -124,14 +124,6 @@ var teamViewBlue = function() {
     }    
 };
 
-if ($(window).width() < 870) {
-    for (var i = 0; i < 6; i++) {
-        $(codeview[i]).addClass("mobile-inactive");
-        console.log("test");
-    }
-} else {
-    console.log('More than 870 resize');
-}
 
 $(".button").click(function() {
     if ( $(this).hasClass("blue-html") ) {
@@ -171,7 +163,7 @@ $(".button").click(function() {
 
 // Fetch Player Names
 
-var DevWarsAPI = "http://bezcode.com:9090/v1/game/currentgame";
+var DevWarsAPI = "http://devwars.tv/v1/game/currentgame";
 
 $.getJSON(DevWarsAPI, function (json) {
       
