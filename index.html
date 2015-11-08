@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>DevWars Live Code</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/darkula.min.css">
+    <link rel="stylesheet" href="darkula.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -26,6 +26,11 @@
 	    <span class="red-js button red-button">Red JS</span>
 	</div>	
 
+	<label id="cssswitch" class="reload">
+    	<span>SCSS/SASS</span>
+        <input type="checkbox" class="regular-radio" onclick="switchCss()">
+    </label>
+
     <label id="reload" class="reload">
     	<span>Auto Reload</span>
         <input type="checkbox" class="regular-radio" onclick="toggleReload()">
@@ -43,7 +48,7 @@
 	<div class="blue-team css blue-view__css">
 		<span class="team__css title">CSS</span>
 		<span id="blue-team__css" class="player">Waiting for Player</span>
-		<pre><code class="css" id="cssBlue"></code></pre>
+		<pre><code class="scss" id="cssBlue"></code></pre>
 	</div>
 
 	<div class="blue-team js blue-view__js">
@@ -61,7 +66,7 @@
 	<div class="red-team css red-view__css">
 		<span class="team__css title">CSS</span>
 		<span id="red-team__css" class="player">Waiting for Player</span>
-		<pre><code class="css" id="cssRed"></code></pre>
+		<pre><code class="scss" id="cssRed"></code></pre>
 	</div>
 
 	<div class="red-team js red-view__js">
@@ -71,7 +76,7 @@
 	</div>
 </div>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+<script src="highlight.pack.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 <script src="main.js"></script>

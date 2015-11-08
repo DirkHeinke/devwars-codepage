@@ -1,13 +1,14 @@
 
 var actions = [
     {"url": "http://blue.devwars.tv/index.html", "id": "htmlBlue"},
-    {"url": "http://blue.devwars.tv/style.css", "id": "cssBlue"},
+    {"url": "http://blue.devwars.tv/style.scss", "id": "cssBlue"},
     {"url": "http://blue.devwars.tv/main.js", "id": "jsBlue"},
     {"url": "http://red.devwars.tv/index.html", "id": "htmlRed"},
-    {"url": "http://red.devwars.tv/style.css", "id": "cssRed"},
+    {"url": "http://red.devwars.tv/style.scss", "id": "cssRed"},
     {"url": "http://red.devwars.tv/main.js", "id": "jsRed"}
 ];
 var reload = false;
+var scss = true;
 
 updateAll();
 
@@ -19,6 +20,23 @@ setInterval(function () {
 
 function toggleReload() {
     reload = !reload;
+}
+
+function switchCss() {
+    if(scss) {
+        actions[1].url = "http://blue.devwars.tv/style.sass";
+        actions[4].url = "http://red.devwars.tv/style.sass";
+        document.getElementById(actions[1].id).className = "stylus";
+        document.getElementById(actions[4].id).className = "stylus";
+        scss = false;
+    } else {
+        actions[1].url = "http://blue.devwars.tv/style.scss";
+        actions[4].url = "http://red.devwars.tv/style.scss";
+        document.getElementById(actions[1].id).className = "scss";
+        document.getElementById(actions[4].id).className = "scss";
+        scss = true;
+    }
+    updateAll();
 }
 
 function updateAll() {
